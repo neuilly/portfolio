@@ -1,0 +1,22 @@
+body {
+  font: 100% Lucida Console, Monaco, monospace;
+  color: #606060; }
+
+p {
+  text-align: center; }
+
+nav {
+  width: 10%; }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  nav li {
+    display: inline-block; }
+  nav a {
+    color: #606060;
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */

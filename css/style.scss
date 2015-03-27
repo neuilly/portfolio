@@ -1,0 +1,31 @@
+$font-stack:    Lucida Console, Monaco, monospace;
+$primary-color: #606060;
+
+body{
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+p{
+	text-align: center;
+}
+
+nav {
+
+	width:10%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+  	color: $primary-color;
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
