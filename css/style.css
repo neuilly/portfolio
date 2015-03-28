@@ -1,22 +1,28 @@
 body {
   font: 100% Lucida Console, Monaco, monospace;
-  color: #606060; }
+  color: #606060;
+  margin-top: 5%; }
 
 p {
   text-align: center; }
 
 nav {
-  width: 10%; }
+  display: inline;
+  margin-left: 30%; }
   nav ul {
     margin: 0;
     padding: 0;
     list-style: none; }
   nav li {
-    display: inline-block; }
+    float: left; }
   nav a {
     color: #606060;
-    display: block;
+    display: inline;
     padding: 6px 12px;
     text-decoration: none; }
+
+h1 {
+  display: inline;
+  margin-left: 5%; }
 
 /*# sourceMappingURL=style.css.map */
