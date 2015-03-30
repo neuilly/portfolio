@@ -4,11 +4,16 @@ body {
   margin-top: 5%; }
 
 p {
-  text-align: center; }
+  text-align: left;
+  font-size: 15px; }
+
+a {
+  text-decoration: none;
+  color: #606060; }
 
 nav {
   display: inline;
-  margin-left: 30%; }
+  margin-left: 50%; }
   nav ul {
     margin: 0;
     padding: 0;
@@ -24,5 +29,25 @@ nav {
 h1 {
   display: inline;
   margin-left: 5%; }
+
+.box {
+  margin-right: 50px;
+  display: block; }
+
+.samples {
+  height: 80%; }
+
+#showbox {
+  display: inline-flex;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%; }
+
+#upcoming {
+  display: block;
+  height: 600px; }
+
+#aboutMe {
+  display: inline; }
 
 /*# sourceMappingURL=style.css.map */
