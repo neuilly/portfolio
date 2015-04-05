@@ -3,24 +3,59 @@
 <head>
  	<title>HyoJeong Choi/works</title>
   	<link rel="stylesheet" href="css/style.css" type="text/css">
+  	<script type="text/javascript" src="jquery.js"></script>
   	<script type="text/javascript" src="work.js"></script>
+  	<!--script type="text/javascript" src="socket.io.js"></script-->	
 </head>
 
 <body>
 	<div id = "wrapper">
-		<h1><a href="index.html">hyojeong choi</a></h1>
-		<nav id = "menu">
-		<a id = "work" title="work page" href ="sample_works.html">work</a>
-		<a id = "about" title="about page" href="about_me.html">about me</a>
-		<a id ="contact" title="contact" href="contact_page.html">contact</a>
-		</nav>
-		
-		<div id = "showbox">
+		<div id = "top" style="position:relative">
+			<h1><a href="index.html">hyojeong choi</a></h1>
+			<nav id = "menu">
+			<a id = "work" title="work page" href ="sample_works.html">work</a>
+			<a id = "about" title="about page" href="about_me.html">about me</a>
+			<a id ="contact" title="contact" href="contact_page.html">contact</a>
+			</nav>
 		</div>
 
-		<script type="text/javascript">work();</script>
-
+		<div id = "showbox">
+			<div id ="box0" class = "box">PLACEHOLDER 1</div>
+			<div id ="box00" class = "box" style="left:30%">PLACEHOLDER 2</div>
+			<div id ="box3" class = "box" style = "left:60%; width:30%;">
+				<img class = "samples" src="images/PEP.png">
+				Problem Solving
+			</div>			
+			<div id ="box1" class = "box" style ="top:30%; width:30%">
+				<img class = "samples" src="images/ADPD/thumb.png">
+				THE FENCE
+			</div>
+			<div id ="box2" class = "box" style="top:30%; left:35%; width:20%">
+				<img class="samples" src="images/blur.jpg">
+				NOISE
+			</div>
+		</div>
 	</div>
+  	<script type="text/javascript" src="work.js"></script>
+	<script type="text/javascript">
+	$(".box").click(function(){
+		var boxID = this.id;
+
+	    $("<div />").attr("id","content").appendTo($( "#wrapper" )).animate({ opacity: 1}, 1500);
+
+        $("<div />").attr("id","img_box").appendTo($("#content"));
+	    $("<div />").attr("id","main_img").appendTo($( "#img_box" ));
+	    $("<div />").attr("id","side_imgs").appendTo($( "#img_box" ));
+
+        $("<div />").attr("id","explanation").appendTo($( "#content" ));
+
+	    work(boxID);
+
+        var height = $("#content").height();
+	    $("#showbox").animate({top:height}, 1000);
+	});
+	</script>
+
 </body>
 
 </html>
