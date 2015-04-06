@@ -1,7 +1,11 @@
 body {
   font: 100% Lucida Console, Monaco, monospace;
   color: #606060;
-  margin-top: 5%; }
+  margin-top: 5%;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
 
 p {
   text-align: left;
@@ -37,6 +41,9 @@ h1 {
   width: 100%;
   height: 100%; }
 
+#top {
+  position: relative; }
+
 #wrapper {
   position: absolute;
   height: 100%;
@@ -51,14 +58,24 @@ h1 {
   margin-right: 5%;
   width: 90%;
   height: 100%;
-  overflow: auto; }
+  overflow: hidden; }
 
 #upcoming {
   display: inline-block;
-  height: 600px; }
+  overflow: scroll;
+  height: 70%;
+  margin-bottom: 5%; }
 
 #aboutMe {
-  display: inline; }
+  margin-left: 3%;
+  position: absolute;
+  width: 55%;
+  display: inline-block; }
+
+#headshot {
+  width: 30%;
+  position: absolute;
+  left: 60%; }
 
 #content {
   position: absolute;
@@ -74,30 +91,42 @@ h1 {
   font-size: 15px; }
 
 #img {
-  height: 90%; }
+  height: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 .side {
   width: 30%; }
+
+#photo_cred {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 20%;
+  top: 70%;
+  font-style: italic;
+  font-size: 12px; }
 
 #img_box {
   position: relative;
   display: -webkit-box;
   width: 100%;
-  height: 55%;
-  font-style: italic;
-  font-size: 15px; }
+  height: 55%; }
 
 #main_img {
   position: relative;
+  width: 60%;
   height: 100%;
-  padding: 5px 5px 5px 5px;
-  font-style: italic;
-  font-size: 10px; }
+  padding: 5px 5px 5px 5px; }
 
 #side_imgs {
   position: relative;
-  display: inline-block;
   width: 30%; }
+
+#photos {
+  position: absolute;
+  width: 100%; }
 
 #explantion {
   position: relative;

@@ -10,7 +10,7 @@
 
 <body>
 	<div id = "wrapper">
-		<div id = "top" style="position:relative">
+		<div id = "top">
 			<h1><a href="index.html">hyojeong choi</a></h1>
 			<nav id = "menu">
 			<a id = "work" title="work page" href ="sample_works.html">work</a>
@@ -20,25 +20,35 @@
 		</div>
 
 		<div id = "showbox">
-			<div id ="box0" class = "box">PLACEHOLDER 1</div>
-			<div id ="box00" class = "box" style="left:30%">PLACEHOLDER 2</div>
-			<div id ="box3" class = "box" style = "left:60%; width:30%;">
+			<div id ="box0" class = "box" style="width:25%; left:3%">
+				<img class = "samples" src="images/placeholder.png">
+				Pastiche
+			</div>
+			<div id ="box00" class = "box" style="left:33%; width:28%; top:2%">
+				<img class = "samples" src="images/placeholder.png">
+				Shadow Tag
+			</div>
+			<div id ="box3" class = "box" style = "left:65%; width:25%;">
 				<img class = "samples" src="images/PEP.png">
 				Problem Solving
 			</div>			
-			<div id ="box1" class = "box" style ="top:30%; width:30%">
+			<div id ="box1" class = "box" style ="top:34%; width:30%">
 				<img class = "samples" src="images/ADPD/thumb.png">
-				THE FENCE
+				The Fence
 			</div>
-			<div id ="box2" class = "box" style="top:30%; left:35%; width:20%">
+			<div id ="box2" class = "box" style="top:36%; left:38%; width:20%">
 				<img class="samples" src="images/blur.jpg">
-				NOISE
+				Noise and Attention
 			</div>
 		</div>
 	</div>
   	<script type="text/javascript" src="work.js"></script>
 	<script type="text/javascript">
 	$(".box").click(function(){
+		if("#content"){
+			$("#wrapper").animate({scrollTop: 0}, 1000);
+			$("#content").remove();
+		}
 		var boxID = this.id;
 
 	    $("<div />").attr("id","content").appendTo($( "#wrapper" )).animate({ opacity: 1}, 1500);
@@ -46,6 +56,8 @@
         $("<div />").attr("id","img_box").appendTo($("#content"));
 	    $("<div />").attr("id","main_img").appendTo($( "#img_box" ));
 	    $("<div />").attr("id","side_imgs").appendTo($( "#img_box" ));
+	    $("<div />").attr("id", "photos").appendTo($("#side_imgs"));
+	    $("<div />").attr("id","photo_cred").appendTo($( "#side_imgs" ));
 
         $("<div />").attr("id","explanation").appendTo($( "#content" ));
 
